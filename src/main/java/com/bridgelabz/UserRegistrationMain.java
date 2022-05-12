@@ -5,5 +5,6 @@ public class UserRegistrationMain {
         System.out.println("Welcome To User Registration Problem");
         System.out.println("----------------------------------------");
         UserRegistrationOprations.validFirstName();
+        UserRegistrationOprations.validLastName();
     }
 }
