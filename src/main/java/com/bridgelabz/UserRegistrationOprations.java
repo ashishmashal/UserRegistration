@@ -93,7 +93,14 @@ public class UserRegistrationOprations {
         System.out.println("Enter the Password Having Minimum 8 Character: ");
         String password=scanner.next();
         //Expression for Password
-        String rejex="^[0-9a-zA-Z]{8,}$";
+        String rejex="^[A-Z]{1}[a-zA-Z]{7,}$";
+        /* the pattern is created using the Pattern.compile() method.
+                 - passing regexPassword- which pattern is being searched for and the search should be case-insensitive
+                * The matcher() method is used to search for the pattern in a string.
+                 -It returns a Matcher object which contains information about the search that was performed.
+                * The matches() method returns true if the pattern was found in the string and false if it was not found.
+        */
+
         //Creating pattern object
         Pattern P=Pattern.compile(rejex);
         //Creating matcher object
@@ -107,4 +114,5 @@ public class UserRegistrationOprations {
             System.out.println("Entered password-d is Invalid");
         return R;
     }
+
 }
