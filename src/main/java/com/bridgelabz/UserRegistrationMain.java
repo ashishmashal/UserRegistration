@@ -12,7 +12,8 @@ public class UserRegistrationMain {
             System.out.println("Enter Your Choice " +
                     "\n1.Validate First Name  " +
                     "\n2.Validate Last Name " +
-                    "\n3.Validate Email "
+                    "\n3.Validate Email " +
+                    "\n4.Validate MobileNo"
                     );
 
             int Option = scanner.nextInt();
@@ -25,6 +26,9 @@ public class UserRegistrationMain {
                     break;
                 case 3 :
                     UserRegistrationOprations.validEmail();
+                    break;
+                case 4 :
+                    UserRegistrationOprations.Mobile_Number();
                     break;
                 default:
                     System.out.println("Enter Valid No");

@@ -9,6 +9,7 @@ public class UserRegistrationOprations {
     static Pattern patternObject;
     static Matcher matcherObject;
     static boolean Return;
+
     /*
     Method For Validation for Last Name
      */
@@ -16,8 +17,8 @@ public class UserRegistrationOprations {
         System.out.print("Enter the First Name : ");
         String name = scanner.next();
         String regex = "^[A-Z]{1}[a-z]{2,}$";
-         patternObject = Pattern.compile(regex);
-         matcherObject = patternObject.matcher(name);
+        patternObject = Pattern.compile(regex);
+        matcherObject = patternObject.matcher(name);
         boolean Return = matcherObject.matches();
 
         if (Return)
@@ -26,6 +27,7 @@ public class UserRegistrationOprations {
             System.out.println("First name is invalid.");
         return Return;
     }
+
     /*
     Method For Validation for Last Name
      */
@@ -43,22 +45,43 @@ public class UserRegistrationOprations {
             System.out.println("Last name is invalid.");
         return Return;
     }
+
     /*
     Method For Validation for Email
      */
-    public static boolean validEmail()
-    {
+    public static boolean validEmail() {
         System.out.print("Enter the Email : ");
         String email = scanner.next();
         String regex = "^[a-z0-9]+@[a-z0-9]+.[a-z]{2,3}+.[a-z]{2,}$";
-        patternObject= Pattern.compile(regex);
-        matcherObject= patternObject.matcher(email);
+        patternObject = Pattern.compile(regex);
+        matcherObject = patternObject.matcher(email);
         Return = matcherObject.matches();
 
         if (Return)
             System.out.println("Email is valid.");
         else
             System.out.println("Email is invalid.");
+        return Return;
+    }
+
+    /*
+    Method For Validation for Mobile No
+     */
+
+    public static boolean Mobile_Number(){
+        System.out.println("Enter the Mobile Number : ");
+        String mobile_number=scanner.nextLine();
+        //Expression for mobile Number
+        String regex ="^[0-9]{2}\\s{0,1}[0-9]{10}$";
+        patternObject =Pattern.compile(regex);
+        matcherObject=patternObject.matcher(mobile_number);
+        Return = matcherObject.matches();
+
+        //Checking whether entered MobileNo is valid pr not
+        if(Return)
+            System.out.println("Entered Mobile Number is Valid");
+        else
+            System.out.println("Entered Mobile Number is Invalid");
         return Return;
     }
 }
