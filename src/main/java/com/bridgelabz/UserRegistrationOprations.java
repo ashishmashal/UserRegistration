@@ -93,8 +93,12 @@ public class UserRegistrationOprations {
         System.out.println("Enter the Password Having Minimum 8 Character: ");
         String password=scanner.next();
         //Expression for Password
+
+        String rejex="^[a-zA-Z]{8,}$";
+
         //Atleat One Spacial Character
         String regex="^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8}$";
+
 
         //Creating pattern object
         patternObject =Pattern.compile(regex);
