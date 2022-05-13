@@ -93,18 +93,24 @@ public class UserRegistrationOprations {
         System.out.println("Enter the Password Having Minimum 8 Character: ");
         String password=scanner.next();
         //Expression for Password
-        String rejex="^[a-zA-Z]{8,}$";
-        //Creating pattern object
-        Pattern P=Pattern.compile(rejex);
-        //Creating matcher object
-        Matcher M=P.matcher(password);
-        boolean R=M.matches();
 
-        //Checking whether entered Mail-id is valid pr not
-        if(R)
+        String rejex="^[a-zA-Z]{8,}$";
+
+        //Atleat One Spacial Character
+        String regex="^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8}$";
+
+
+        //Creating pattern object
+        patternObject =Pattern.compile(regex);
+        matcherObject=patternObject.matcher(password);
+        Return = matcherObject.matches();
+
+
+        if(Return)
             System.out.println("Entered password is Valid");
         else
             System.out.println("Entered password-d is Invalid");
-        return R;
+        return Return;
     }
+
 }

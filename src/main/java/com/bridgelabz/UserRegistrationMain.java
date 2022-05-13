@@ -34,6 +34,7 @@ public class UserRegistrationMain {
                 case 5:
                     UserRegistrationOprations.validPassword();
                     break;
+
                 default:
                     System.out.println("Enter Valid No");
                     break;
