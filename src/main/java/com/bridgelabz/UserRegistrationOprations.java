@@ -13,9 +13,9 @@ public class UserRegistrationOprations {
     /*
     Method For Validation for Last Name
      */
-    public static boolean validFirstName() {
-        System.out.print("Enter the First Name : ");
-        String name = scanner.next();
+    public static boolean validFirstName(String name) {
+//        System.out.print("Enter the First Name : ");
+//        String name = scanner.next();
         String regex = "^[A-Z]{1}[a-z]{2,}$";
         patternObject = Pattern.compile(regex);
         matcherObject = patternObject.matcher(name);
@@ -31,12 +31,12 @@ public class UserRegistrationOprations {
     /*
     Method For Validation for Last Name
      */
-    public static boolean validLastName() {
-        System.out.print("Enter the Last Name : ");
-        String name = scanner.next();
+    public static boolean validLastName(String lastname) {
+//        System.out.print("Enter the Last Name : ");
+//        String lastname = scanner.next();
         String regex = "^[A-Z]{1}[a-z]{2,}$";
         patternObject = Pattern.compile(regex);
-        matcherObject = patternObject.matcher(name);
+        matcherObject = patternObject.matcher(lastname);
         Return = matcherObject.matches();
 
         if (Return)
@@ -49,9 +49,9 @@ public class UserRegistrationOprations {
     /*
     Method For Validation for Email
      */
-    public static boolean validEmail() {
-        System.out.print("Enter the Email : ");
-        String email = scanner.next();
+    public static boolean validEmail(String email ) {
+//        System.out.print("Enter the Email : ");
+//        String email = scanner.next();
         String regex = "^[a-z0-9]+@[a-z0-9]+.[a-z]{2,3}+.[a-z]{2,}$";
         patternObject = Pattern.compile(regex);
         matcherObject = patternObject.matcher(email);
@@ -68,9 +68,9 @@ public class UserRegistrationOprations {
     Method For Validation for Mobile No
      */
 
-    public static boolean Mobile_Number(){
-        System.out.println("Enter the Mobile Number : ");
-        String mobile_number=scanner.nextLine();
+    public static boolean Mobile_Number(String mobile_number){
+//        System.out.println("Enter the Mobile Number : ");
+//        String mobile_number=scanner.nextLine();
         //Expression for mobile Number
         String regex ="^[0-9]{2}\\s{0,1}[0-9]{10}$";
         patternObject =Pattern.compile(regex);
@@ -87,13 +87,11 @@ public class UserRegistrationOprations {
     /*
         Method For Validation for Password
      */
-
-
-    public static boolean validPassword(){
-        System.out.println("Enter the Password Having Minimum 8 Character: ");
-        String password=scanner.next();
+    public static boolean validPassword(String password){
+//        System.out.println("Enter the Password Having Minimum 8 Character: ");
+//        String password=scanner.next();
         //Expression for Password
-        //Atleat One Spacial Character
+        //At-least One Spacial Character
         String regex="^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8}$";
 
         //Creating pattern object
