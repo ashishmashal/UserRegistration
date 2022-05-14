@@ -13,7 +13,7 @@ public class UserRegistrationOprations {
     /*
     Method For Validation for Last Name
      */
-    public static boolean validFirstName(String name) {
+    public static boolean validFirstName(String name) throws InvalidUserException{
 //        System.out.print("Enter the First Name : ");
 //        String name = scanner.next();
         String regex = "^[A-Z]{1}[a-z]{2,}$";
@@ -31,7 +31,7 @@ public class UserRegistrationOprations {
     /*
     Method For Validation for Last Name
      */
-    public static boolean validLastName(String lastname) {
+    public static boolean validLastName(String lastname) throws InvalidUserException{
 //        System.out.print("Enter the Last Name : ");
 //        String lastname = scanner.next();
         String regex = "^[A-Z]{1}[a-z]{2,}$";
@@ -49,7 +49,7 @@ public class UserRegistrationOprations {
     /*
     Method For Validation for Email
      */
-    public static boolean validEmail(String email ) {
+    public static boolean validEmail(String email ) throws InvalidUserException{
 //        System.out.print("Enter the Email : ");
 //        String email = scanner.next();
         String regex = "^[a-z0-9]+@[a-z0-9]+.[a-z]{2,3}+.[a-z]{2,}$";
@@ -68,7 +68,7 @@ public class UserRegistrationOprations {
     Method For Validation for Mobile No
      */
 
-    public static boolean Mobile_Number(String mobile_number){
+    public static boolean Mobile_Number(String mobile_number)throws InvalidUserException{
 //        System.out.println("Enter the Mobile Number : ");
 //        String mobile_number=scanner.nextLine();
         //Expression for mobile Number
@@ -87,7 +87,7 @@ public class UserRegistrationOprations {
     /*
         Method For Validation for Password
      */
-    public static boolean validPassword(String password){
+    public static boolean validPassword(String password) throws InvalidUserException{
 //        System.out.println("Enter the Password Having Minimum 8 Character: ");
 //        String password=scanner.next();
         //Expression for Password
