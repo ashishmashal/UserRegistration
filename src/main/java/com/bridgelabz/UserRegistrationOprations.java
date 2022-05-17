@@ -120,13 +120,11 @@ public class UserRegistrationOprations{
 //        System.out.println("Enter the Password Having Minimum 8 Character: ");
 //        String password=scanner.next();
         //Expression for Password
+
         //At-least One Spacial Character
-        if (Password == null) {
-            throw new InvalidUserException("Null Pointer Exception");
-        } else if (Password.length() == 0) {
-            throw new InvalidUserException("Empty Exception ");
-        }
+
         String regex="^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8}$";
+
 
         //Creating pattern object
         patternObject =Pattern.compile(regex);
