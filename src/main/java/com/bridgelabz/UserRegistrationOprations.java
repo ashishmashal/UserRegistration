@@ -4,15 +4,20 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class UserRegistrationOprations {
+interface UserValidate{
+    boolean validate(String message) throws InvalidUserException;
+}
+
+public class UserRegistrationOprations{
     public static final Scanner scanner = new Scanner(System.in);
     static Pattern patternObject;
     static Matcher matcherObject;
     static boolean Return;
 
     /*
-    Method For Validation for Last Name
+    Method For Validation for 
      */
+
    public static String validFirstName(String name) throws InvalidUserException {
         try {
             String regex = "^[A-Z]{1}[a-z]{2,}$";
@@ -88,4 +93,5 @@ public class UserRegistrationOprations {
             throw new InvalidUserException("Invalid password.");
         }
     }
+
 }
